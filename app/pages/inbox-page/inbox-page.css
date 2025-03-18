@@ -1,0 +1,89 @@
+.inbox-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-color: white;
+  position: relative;
+  overflow-x: hidden;
+  box-sizing: border-box; 
+}
+
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 40;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.sidebar-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (max-width: 36rem) {
+  .inbox-container {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh; 
+    padding-top: 3.75rem; 
+    width: 100%;
+  }
+
+  .sidebar-overlay {
+    display: block;
+  }
+}
+
+@media (min-width: 36.0625rem) and (max-width: 47.9375rem) {
+  .inbox-container {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    padding-top: 3.75rem; 
+    width: 100%;
+  }
+
+  .sidebar-overlay {
+    display: block;
+  }
+}
+
+@media (min-width: 48rem) and (max-width: 61.9375rem) {
+  .inbox-container {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    padding-top: 3.75rem;
+    width: 100%;
+  }
+
+  .sidebar-overlay {
+    display: block;
+  }
+}
+
+@media (min-width: 62rem) and (max-width: 74.9375rem) {
+  .inbox-container {
+    flex-direction: row;
+    height: 100vh;
+    padding-top: 0;
+    width: 100%;
+  }
+}
+
+@media (min-width: 75rem) {
+  .inbox-container {
+    flex-direction: row;
+    height: 100vh;
+    padding-top: 0;
+    width: 100%;
+  }
+}
+
